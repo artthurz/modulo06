@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'modulo06' do
-  # Pods for modulo06
+target 'mobile' do
+  # Pods for mobile
   pod 'React', :path => '../node_modules/react-native/'
   pod 'React-Core', :path => '../node_modules/react-native/React'
   pod 'React-DevSupport', :path => '../node_modules/react-native/React'
@@ -28,7 +28,13 @@ target 'modulo06' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'modulo06Tests' do
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
+
+  target 'mobileTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -36,10 +42,10 @@ target 'modulo06' do
   use_native_modules!
 end
 
-target 'modulo06-tvOS' do
-  # Pods for modulo06-tvOS
+target 'mobile-tvOS' do
+  # Pods for mobile-tvOS
 
-  target 'modulo06-tvOSTests' do
+  target 'mobile-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
